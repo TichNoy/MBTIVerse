@@ -1,0 +1,82 @@
+/* Responsive: co giãn khi màn hình nhỏ */
+
+.hero-section {
+  background-color: #79b8f4;
+  color: white;
+  padding: 75px 15px 90px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  min-height: 80vh;
+}
+
+.hero-content {
+  max-width: 750px;
+  margin: 0 auto;
+  z-index: 1;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 15px; 
+}
+
+.hero-content p {
+  font-size: 0.9rem;
+  margin-bottom: 22.5px; 
+  line-height: 1.5;
+}
+
+.marquee-wrapper {
+  overflow: hidden;
+  white-space: nowrap;
+  background-color: #79b8f4;
+  padding: 37.5px 0; 
+  position: relative;
+}
+
+.marquee-boxes {
+  display: inline-flex;
+  animation: scroll-boxes 50s linear infinite;
+}
+
+.box {
+  flex: 0 0 225px;
+  margin: 0 15px;  
+  background: white;
+  border-radius: 12px; 
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 4.5px 15px rgba(0, 0, 0, 0.1); 
+  color: #333;
+  text-decoration: none;
+}
+
+.box img {
+  width: 45px; 
+  height: auto;
+  margin-bottom: 7.5px; 
+}
+
+@keyframes scroll-boxes {
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.btn-cta {
+  display: inline-block;
+  background-color: #9466cc;
+  color: white;
+  padding: 15px 36px; 
+  border-radius: 22.5px; 
+  text-decoration: none;
+  font-size: 1.05rem; 
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.btn-cta:hover {
+  background-color: #faa9eb;
+}

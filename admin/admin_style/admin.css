@@ -1,0 +1,210 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #c7d8f0; 
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  scrollbar-width: none;
+}
+
+#container {
+  width: 100%;
+  display: flex; /* Dùng flexbox để sắp xếp header và wrapper */
+  flex-direction: column; /* Sắp xếp theo cột: header trên, wrapper dưới */
+  flex-grow: 1;
+  min-height: 100vh;
+}
+
+/* HEADER STYLES */
+#header {
+  height: 80px; /* Chiều cao header */
+  background-color: #041526; /* Màu đen đậm hoặc xám rất đậm */
+  color: white;
+  display: flex; /* Dùng flexbox để sắp xếp các phần tử bên trong header */
+  justify-content: space-between; /* Đẩy các phần tử sang hai bên */
+  align-items: center; /* Căn giữa theo chiều dọc */
+  padding: 0 30px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ */
+  flex-shrink: 0; /* Ngăn header bị co lại */
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width:100%;
+  
+}
+.header-left a.logo { 
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 0 15px;
+  font-size: 15px;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+.header-left a.logo:hover {
+  opacity: 1;
+}
+
+.header-left a.logo .fas {
+  margin-right: 8px; /* Khoảng cách icon */
+}
+
+.header-center a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 0 15px;
+  font-size: 15px;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.header-center a:hover {
+  opacity: 1;
+}
+
+/* Nút dropdown chào admin */
+.header-right button.btn-secondary {
+  background: transparent;
+  color: #ddd;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+  margin: 0 50px;
+}
+
+.header-right button.btn-secondary i {
+  margin-left: 5px;
+}
+
+/* Dropdown menu */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  list-style: none;
+  padding: 0;
+  margin-top: 5px;
+  min-width: 150px;
+  z-index: 1000;
+  margin: 0 50px;
+}
+
+.dropdown-menu.show {
+  display: block;
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #333;
+  transition: background-color 0.3s;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #f0f0f0;
+}
+
+/* WRAPPER (LEFT + RIGHT) STYLES */
+#wrapper {
+  display: flex; /* Dùng flexbox để sắp xếp left và right */
+  flex: 1; /* Cho phép wrapper chiếm hết không gian còn lại */
+  margin-top: 80px;
+  width:100%;
+  height: 100vh;
+}
+
+/* LEFT SIDEBAR STYLES */
+#left {
+  width: 250px; /* Chiều rộng của sidebar */
+  background-color: #ffffff; 
+  border-right: 1px solid #e0e0e0; /* Đường viền bên phải */
+  padding-top: 15px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.05); /* Đổ bóng nhẹ bên phải */
+  flex-shrink: 0; /* Ngăn sidebar bị co lại */
+}
+
+#left ul {
+  list-style: none; /* Bỏ dấu chấm của list */
+  padding: 0;
+  margin: 0;
+}
+
+#left .menu-item {
+  border-bottom: 1px solid #f0f0f0; /* Đường viền nhẹ giữa các mục */
+}
+
+#left .menu-item:last-child {
+  border-bottom: none; /* Không có đường viền ở mục cuối cùng */
+}
+
+#left .menu-item a {
+  display: flex; /* Dùng flexbox để căn chỉnh icon và text */
+  align-items: center; /* Căn giữa theo chiều dọc */
+  color: #333; /* Màu chữ đậm */
+  text-decoration: none;
+  padding: 12px 15px; /* Padding cho các mục menu */
+  font-size: 15px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#left .menu-item a .fas {
+  margin-right: 10px; /* Khoảng cách giữa icon và text */
+  width: 20px; /* Đảm bảo icon có chiều rộng cố định để căn chỉnh đều */
+  text-align: center;
+}
+
+#left .menu-item a:hover {
+  background-color: #e6f7ff; /* Màu nền xanh nhạt khi hover */
+  color: #1890ff; /* Màu chữ xanh khi hover */
+}
+
+/* Style cho mục đang được chọn (ví dụ: Trang chủ Admin) */
+#left .menu-item#trang-chu-admin a {
+  background-color: #e6f7ff;
+  color: #1890ff;
+  font-weight: bold;
+}
+
+/* Style cho các mục có submenu */
+.menu-item.has-submenu a {
+  position: relative; /* Để định vị mũi tên con */
+}
+
+.menu-item.has-submenu .submenu-arrow {
+  margin-left: auto; /* Đẩy mũi tên sang phải */
+  transition: transform 0.3s ease;
+}
+
+/* Khi menu item đang active (mở submenu) - cần JS để toggle class này */
+.menu-item.has-submenu.active .submenu-arrow {
+  transform: rotate(180deg); /* Xoay mũi tên khi submenu mở */
+}
+/* RIGHT SIDEBAR STYLES */
+#right {
+  flex-grow: 1; /* Cho phép #right mở rộng để chiếm hết không gian còn lại */
+  background-color: #f0f2f5; /* Hoặc màu nền bạn muốn cho khu vực nội dung */
+   
+  overflow-y: auto;
+}
+
+#back_to_top {
+  font-weight: bold;
+  font-size: 15px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+}
+#back_to_top.show {
+  opacity: 0.8;
+  visibility: visible;
+}

@@ -1,0 +1,100 @@
+.initial-cards-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 0px 15px;
+  min-height: 300px;
+}
+.initial-cards-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 150px 20px 40px;
+
+}
+.section-heading {
+  font-size: 40px;
+  color: #8a4fc1;
+  text-align: center;
+  font-weight: bold;
+}
+.card_8,
+.card_16 {
+  background-color: #e0f2f1;
+  border-radius: 11.25px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); /* bóng đổ giảm nhẹ */
+  flex: 0 0 285px;
+  max-width: 337.5px;
+  padding: 26.25px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  margin: 0;
+}
+
+.card_8:hover,
+.card_16:hover {
+  transform: translateY(-7.5px);
+  box-shadow: 0 9px 18.75px rgba(0, 0, 0, 0.2);
+}
+
+.card_8 .icon,
+.card_16 .icon {
+  font-size: 52.5px;
+  color: #824ac7;
+  margin-bottom: 11.25px;
+}
+
+.card_8 h2,
+.card_16 h2 {
+  margin-top: 0;
+  font-size: 21px;
+  color: #333;
+  line-height: 1.3;
+}
+/* Căn chỉnh phần overlay */
+#mbtiOverlay .overlay-content {
+  max-width: 800px;         /* tăng chiều rộng tối đa */
+  width: 90%;               /* responsive với màn hình */
+  margin-top: 75px;
+  margin-bottom: 75px;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  text-align: left;
+  line-height: 1.6;
+  
+}
+
+/* Căn đều chữ */
+#mbtiOverlay .overlay-content p,
+#mbtiOverlay .overlay-content li {
+  text-align: justify;
+  font-size: 18px;
+  color:#080808;
+
+}
+
+/* Danh sách rõ ràng hơn */
+#mbtiOverlay .overlay-content ul {
+  padding-left: 1.5rem;
+  margin-bottom: 1.2rem;
+}
+
+#mbtiOverlay .overlay-content h4 {
+  margin: 1rem 0 0.5rem;
+  font-weight: bold;
+  color: #444;
+}
+
+/* Làm nội dung không bị kéo dài */
+@media screen and (min-width: 768px) {
+  #mbtiOverlay .overlay-content {
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+}
+

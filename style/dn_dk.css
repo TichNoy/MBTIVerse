@@ -1,0 +1,196 @@
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding-bottom: 40px;
+  position: relative;
+  background: #f0f8ff;
+}
+
+.container {
+  text-align: center;
+  width: 500px;
+  background: rgb(149, 215, 244);
+  padding: 40px 35px;
+  border-radius: 30px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Các nút chuyển đổi Đăng nhập / Đăng ký */
+.toggle-buttons {
+  display: flex;
+  margin-bottom: 25px;
+}
+
+.toggle-buttons button {
+  flex: 1;
+  padding: 12px;
+  background-color: #e0f2f1;
+  border: none;
+  border-radius: 25px;
+  font-size: 16.5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.toggle-buttons button:first-child {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.toggle-buttons button:last-child {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.toggle-buttons button.active {
+  background-color: #9466cc;
+  color: white;
+}
+
+/* Form chung */
+.form {
+  display: none;
+}
+
+.form.active {
+  display: block;
+}
+
+.form h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.form p {
+  font-size: 14px;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+/* Label & Input */
+.form label {
+  text-align: left;
+  display: block;
+  margin-top: 12px;
+  font-weight: 600;
+  color: #333;
+  font-size: 15px;
+}
+
+.form input[type="text"],
+.form input[type="password"],
+.form input[type="email"] {
+  width: 100%;
+  padding: 13px;
+  margin-top: 5px;
+  margin-bottom: 12px;
+  border-radius: 25px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  outline-color: #9466cc;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form input:focus {
+  border-color: #9466cc;
+  box-shadow: 0 0 5px rgba(148, 102, 204, 0.4);
+}
+
+/* Form actions */
+.form-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 13px;
+  margin: 15px 0;
+}
+
+.form-actions a {
+  color: #9466cc;
+  text-decoration: none;
+}
+
+.form-actions a:hover {
+  text-decoration: underline;
+}
+
+/* Nút submit */
+.submit-buttons-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+}
+
+.submit-buttons-wrapper .submit-btn {
+  width: 200px;
+  padding: 13px;
+  background-color: #9466cc;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.submit-buttons-wrapper .submit-btn:hover {
+  background-color: #ed0e5c;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Ẩn */
+.hidden {
+  display: none;
+}
+
+.back-to-login-wrapper {
+  text-align: center;
+  margin-top: 10px;
+  /* hoặc 20px nếu bạn muốn cách xa nút */
+}
+
+.back-to-login {
+  display: inline-block;
+  font-size: 15px;
+  color: #5a87a3;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.back-to-login:hover {
+  color: #ed0e5c;
+  text-decoration: underline;
+}
+
+.password-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.password-wrapper .password-input {
+  padding-right: 36px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.password-toggle-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  cursor: pointer;
+  user-select: none;
+  color: #666;
+  display: none;
+}
+
+.form.hidden {
+  display: none !important;
+}

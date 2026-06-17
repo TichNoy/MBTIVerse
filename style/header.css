@@ -1,0 +1,130 @@
+@media (max-width: 768px) {
+  .logo {
+    font-size: 22.5px; 
+    font-weight: bold;
+    text-decoration: none;
+  }
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 7.5px; 
+    padding: 7.5px 0;
+    font-weight: bold;
+  }
+  .nav-links li a {
+    font-size: 11.25px; 
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  .btn-secondary {
+    font-size: 18.75px; 
+    text-decoration: none;
+    font-weight: bold;
+  }
+}
+
+.navbar {
+  width: 100%;
+  max-width: 100%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 7.5px 15px; 
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  box-shadow: 0 1.5px 4.5px rgba(0, 0, 0, 0.05); 
+  background-color: white;
+  font-weight: bold;
+}
+
+.logo {
+  font-size: 37px; 
+  font-weight: bold;
+  text-decoration: none;
+  color: #9466cc;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 30px; 
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+.nav-links li a {
+  font-size: 23px; 
+  color: #333;
+  text-decoration: none;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+}
+
+.btn-secondary a {
+  color: #4b4949;
+  font-size: 16px; 
+  text-decoration: none;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: #333;
+  border: 1.5px solid #ccc; 
+  padding: 7px 30px; 
+  border-radius: 18px; 
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  margin-right: 7.5px; 
+  cursor: pointer;
+}
+
+.btn-secondary a:hover {
+  color: #8093f1;
+}
+
+.nav-links li a:hover {
+  color: #8093f1;
+}
+.user-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 110%;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  list-style: none;
+  padding: 8px 0;
+  min-width: 160px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+
+.dropdown-menu li {
+  padding: 8px 16px;
+}
+
+.dropdown-menu li a {
+  color: #333;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-menu li:hover {
+  background-color: #f0f0f0;
+}
