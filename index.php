@@ -1,9 +1,6 @@
 <?php
-if (session_status() === PHP_SESSION_NONE) {
-    session_start();
-}
+include 'inc/bootstrap.php';
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>

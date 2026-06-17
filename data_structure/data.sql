@@ -1,6 +1,4 @@
 -- Tạo database
-CREATE DATABASE IF NOT EXISTS mbti_schema;
-USE mbti_schema;
 -- Thông tin người dùng
 CREATE TABLE users (
     user_id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
