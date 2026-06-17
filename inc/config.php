@@ -1,15 +1,28 @@
 <?php
-// Cấu hình đường dẫn gốc (dùng cho liên kết trong header/footer)
-$base_url = "/MBTIVerse";
-//Cấu hình kết nối database
-$db_host = "localhost";     // Server CSDL (thường là localhost)
-$db_user = "root";          // Tên người dùng (XAMPP thường là root)
-$db_pass = "";              // Mật khẩu (XAMPP thường để trống)
-$db_name = "mbti_schema";       // Tên database bạn đã tạo
-//Kết nối đến MySQL
-$conn = new mysqli($db_host, $db_user, $db_pass, $db_name);
-//Kiểm tra kết nối
+// Cấu hình đường dẫn gốc
+$base_url = "";
+
+// Thông tin kết nối Railway MySQL
+$db_host = "homas.proxy.rlwy.net";
+$db_user = "root";
+$db_pass = "crnqsvSwHcqPDQJKOlqOyXPmkRBLcAhU";
+$db_name = "railway";
+$db_port = 17405;
+
+// Kết nối MySQL
+$conn = new mysqli(
+    $db_host,
+    $db_user,
+    $db_pass,
+    $db_name,
+    $db_port
+);
+
+// Kiểm tra kết nối
 if ($conn->connect_error) {
     die("Kết nối thất bại: " . $conn->connect_error);
 }
+
+// Thiết lập UTF-8
+$conn->set_charset("utf8mb4");
 ?>
