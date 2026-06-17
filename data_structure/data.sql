@@ -70,3 +70,5 @@ CREATE TABLE user_answers (
     FOREIGN KEY (result_id) REFERENCES results(result_id) ON DELETE CASCADE,
     FOREIGN KEY (question_id) REFERENCES questions(question_id) ON DELETE CASCADE
 );
+
+UPDATE users SET role = 'admin' WHERE username = 'giau123';

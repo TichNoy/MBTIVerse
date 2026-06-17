@@ -1,4 +1,3 @@
-
 <?php
 include_once '../inc/config.php';
 start_secure_session();
